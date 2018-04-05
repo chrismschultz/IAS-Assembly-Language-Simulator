@@ -1,0 +1,35 @@
+0 1 a 
+1 -2 b
+2 c
+3 4
+4 10
+5 begin
+6 load M(0)
+7 add M(1)
+8 add |M(1)|
+9 sub M(1)
+10 sub |M(1)|
+11 load M(3)
+12 lsh
+14 rsh
+15 .c=b*4
+16 load MQ,M(1)
+17 mul M(3)
+18 stor M(2)
+19 .c=c/-2
+20 load M(2)
+21 div M(1)
+22 load MQ
+23 stor M(2)
+24 jump M(26)
+25 .this line skipped
+26 load M(0)
+27 jump+ M(29)
+28 .this line skipped
+29 sub M(0)
+30 jump+ M(32)
+31 . this line skipped
+32 load M(1)
+33 jump+ M(35)
+34 .this line is NOT skipped
+35 halt

@@ -1,0 +1,29 @@
+0 0 a 
+1 c
+2 2
+3 3
+4 10
+5 begin
+6 load M(3)
+7 stor M(0)
+9 . a <= 9 same line #as next, should be over written during load
+9 load M(0)
+10 sub M(4)
+11 jump+ M(24)
+12 . c=c+(a/3+2)
+13 load M(0)
+14 div M(3)
+15 load MQ
+16 add M(2)
+17 add M(1)
+18 stor M(1)
+19 . a=a+3 same line #as next, should be overwritten during load
+19 load M(0)
+20 add M(3)
+21 stor M(0)
+22 jump M(10)
+23 . c=c*2
+24 load MQ,M(1)
+25 mul M(2)
+26 stor M(1)
+27 halt
